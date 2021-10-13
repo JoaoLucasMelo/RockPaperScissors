@@ -14,21 +14,21 @@ let compChoice = types[randomIndex]
 let choosetype = types.find( t => t.name === type)
 document.getElementById('image').innerHTML = `<img src= "${choosetype.urlImg}" width="400" height="400" alt="">,<img src= "${compChoice.urlImg}" width="400" height="400" alt="">`
 if (choosetype === compChoice) {
-  timedAlert("DRAW!")
+document.getElementById('text').innerText = `IT'S A DRAW!!`
 } else if (type == 'rock' && compChoice.name == 'scissors'){
-  timedAlert("YOU WON!")
+  document.getElementById('text').innerText = `YOU WON!!`
 } else if (type == 'paper' && compChoice.name == 'scissors'){
-timedAlert("YOU LOST!")
+  document.getElementById('text').innerText = `YOU LOST!!`
 } else if (type == 'scissors' && compChoice.name == 'rock'){
-timedAlert("YOU LOST!")
+  document.getElementById('text').innerText = `YOU LOST!!`
 } else if (type == 'paper' && compChoice.name == 'rock'){
-  timedAlert("YOU WON!")
+  document.getElementById('text').innerText = `YOU WON!!`
 } else if (type == 'rock' && compChoice.name == 'paper'){
-  timedAlert("YOU LOST!")
+  document.getElementById('text').innerText = `YOU LOST!!`
 } else if (type == 'scissors' && compChoice.name == 'paper'){
-  timedAlert("YOU WON!")}
+  document.getElementById('text').innerText = `YOU WON!!`}
 }
 
-function timedAlert(message){
-  setTimeout( ()=> alert(message), 500)
-}
+//function timedAlert(message){
+//setTimeout( ()=> alert(message), 500)
+//}
